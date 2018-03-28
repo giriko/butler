@@ -28,6 +28,6 @@
   (-save-profiles empty-profile "profiles"))
 
 (defn make-profile [name dir]
-  (-> -load-profiles ("profiles")
+  (-> (-load-profiles "profiles")
       (add-profile (struct new-profile name dir))
       (-save-profiles "profiles")))
